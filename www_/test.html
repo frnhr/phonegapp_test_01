@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <title>Index Page</title>
+        
+        <!-- Adding viewport -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+            
+            <!-- Adding jQuery scripts -->
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+            
+            <!-- Since jQuery Mobile relies on jQuery core's $.ajax() functionality,
+             $.support.cors & $.mobile.allowCrossDomainPages must be set to true to tell
+             $.ajax to load cross-domain pages. -->
+            <script type="text/javascript">
+                $(document).bind("mobileinit", function() {
+                                 $.support.cors = true;
+                                 $.mobile.allowCrossDomainPages = true;
+                                 });
+                </script>
+            
+            <!-- Adding Phonegap scripts -->
+            <script type="text/javascript" charset="utf-8"
+                src="cordova/cordova-1.8.0.js"></script>
+            
+            <!-- Adding jQuery mobile scripts & CSS -->
+            <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.2.0.min.css" />
+            <script type="text/javascript"
+                src="jquerymobile/jquery.mobile-1.2.0.min.js"></script>
+            
+    </head>
+    <script type="text/javascript">
+        // Listener that will invoke the onDeviceReady() function as soon as phonegap has loaded properly
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            navigator.splashscreen.hide();
+            
+            document.addEventListener("backbutton", onBackClickEvent, false); // Adding the back button listener
+            
+        }
+        </script>
+    <body>
+        <div data-role="page" id="something" data-ajax="false">
+            <script type="text/javascript">
+                $("#something").on("pageinit", function(e) {
+                                   
+                                   });
+                
+                $("#something").on("pageshow", function(e) {
+                                   
+                                   });
+                
+                $("#something").on("pagebeforeshow", function(e) {
+                                   
+                                   });
+                </script>
+            
+            <div data-role="header">            
+            </div>
+            
+            <body>
+                <!-- Home -->
+                <div data-role="page" id="page1">
+                    <div data-theme="a" data-role="header">
+                        <h3>
+                            Header
+                        </h3>
+                        <a data-role="button" href="#page1" class="ui-btn-left">
+                            Button
+                        </a>
+                        <a data-role="button" href="#page1" class="ui-btn-right">
+                            Button
+                        </a>
+                    </div>
+                    <div data-role="content">
+                        <div data-role="navbar" data-iconpos="top">
+                            <ul>
+                                <li>
+                                    <a href="#page1" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">
+                                        Button
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-role="navbar" data-iconpos="top">
+                            <ul>
+                                <li>
+                                    <a href="#page1" data-theme="" data-icon="" class="ui-btn-active ui-state-persist">
+                                        Button
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a data-role="button" href="#page1">
+                            Button
+                        </a>
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <label for="slider1">
+                                    Value:
+                                </label>
+                                <input type="range" name="slider" value="50" min="0" max="100" data-highlight="false" />
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div data-theme="a" data-role="footer" data-position="fixed">
+                        <h3>
+                            Footer
+                        </h3>
+                    </div>
+                </div>
+                <script>
+                    //App custom javascript
+                    </script>
+        </div>
+    </body> </html>
